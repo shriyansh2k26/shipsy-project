@@ -12,7 +12,7 @@ A simple and responsive expense tracking web application built with React. It al
 
 ## 📸 Demo
 
-![App Screenshot](screenshot.png) <!-- Replace with your actual screenshot file or link -->
+![App Screenshot](Screenshot 2025-07-31 160124.png) <!-- Replace with your actual screenshot file or link -->
 
 ## 🛠️ Tech Stack
 
