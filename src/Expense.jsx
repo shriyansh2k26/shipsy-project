@@ -81,14 +81,14 @@ const Expense = () => {
 
     if (
   !description.trim().length ||
-  description.trim().length > 50 ||  // <-- new condition
+  description.trim().length > 20 ||  // <-- new condition
   !amount ||
   !category ||
   !date
 ) {
   setMessage(
-    description.trim().length > 50
-      ? 'Description must be less than 50 characters.'
+    description.trim().length > 20
+      ? 'Description must be less than 20 characters.'
       : 'Please fill in all fields.'
   );
   return;
