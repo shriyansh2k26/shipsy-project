@@ -1,23 +1,46 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
+/node_modules/
+
+# build outputs
+/build/
+/dist/
+
+# production logs
+*.log
+logs/
+
+# environment variables
+.env
+.env.local
+.env.*.local
 
 # testing
-/coverage
+/coverage/
 
-# production
-/build
+# editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
 
-# misc
+# OS system files
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+Thumbs.db
+ehthumbs.db
+Icon?
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# optional cache folders
+.cache/
+.parcel-cache/
+
+# local storage emulation (browser won't persist this in Git but just in case)
+*.localStorage.json
+
+# eslint cache
+.eslintcache
+
+# yarn
+yarn.lock
+
+# npm
+package-lock.json
