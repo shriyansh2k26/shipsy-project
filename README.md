@@ -10,9 +10,6 @@ A simple and responsive expense tracking web application built with React. It al
 - 💾 Stores data in browser using localStorage
 - 📱 Fully responsive for mobile and desktop
 
-## 📸 Demo
-
-![App Screenshot](Screenshot 2025-07-31 160124.png) <!-- Replace with your actual screenshot file or link -->
 
 ## 🛠️ Tech Stack
 
@@ -21,9 +18,4 @@ A simple and responsive expense tracking web application built with React. It al
 - JavaScript (ES6)
 - localStorage (for persistence)
 
-## 📦 Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/expense-tracker.git
-   cd expense-tracker
