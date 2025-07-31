@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+Project Expense Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+                                    Description
 
-In the project directory, you can run:
 
-### `npm start`
+Link: https://shipsy-project-2k3h.vercel.app/
+GitHub :https://github.com/shriyansh2k26/shipsy-project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+AI prompt used 
+Asked for CSS for my form:for good ui.
+How to use localstorage at browser to store the data such that after refreshing the data is not lost. 
+Date function in react to know the current date.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Quality assurance test cases 
+Positive Test Cases
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Scenario
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Expected Result
+1
+Add valid expense
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Expense is added, success message shown, balance updated
+2
+Default today’s date is set
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Expense form and filter should show today’s date
+3
+Filter by date
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Only expenses for that date should show
+4
+Filter by category
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Only matching category expenses show
+5
+Clear filters
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+All filters reset, and full expense list shown
+6
+Delete expense
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Expense is removed, message shows "Expense deleted."
+7
+LocalStorage persistence
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Expenses should persist and reload from localStorage
+8
+Amount totals correctly
+
+
+Balance should be the correct sum of visible (filtered) expenses
+
+
+Negative Test Cases
+
+
+
+
+Scenario
+
+
+Expected Result
+1
+Missing fields
+
+
+Message: "Please fill in all fields."
+2
+Invalid amount (negative)
+
+
+Message: "Enter a valid positive amount."
+3
+Invalid amount (non-numeric)
+
+
+Message: "Enter a valid positive amount."
+4
+Future date
+
+
+Message: "Future date not allowed."
+5
+Delete cancellation
+
+
+No deletion should occur
+6
+Invalid localStorage data
+
+
+Console logs error, app does not crash, empty list shown
+
+
+
+Edge Cases
+
+
+
+
+Scenario
+
+
+Expected Result
+1
+Add expense with same description/category/date multiple times
+
+
+All entries added and shown separately
+2
+Add expense with decimal amount
+
+
+Amount is accepted and total reflects decimal
+3
+Rapid addition/deletion
+
+
+State updates without crashing or incorrect total
+4
+Filter with no match
+
+
+Table is empty, total = ₹0.00
+
+
