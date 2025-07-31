@@ -1,169 +1,13 @@
-/* Container */
-.expense-container {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
-}
+@media screen and (max-width: 768px) {
+  .expense-container {
+    padding: 15px;
+    margin: 20px 10px;
+  }
 
-/* Heading */
-.expense-container h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-/* Form */
-.expense-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: space-between;
-  margin-bottom: 25px;
-}
-
-.expense-form input,
-.expense-form select,
-.expense-form button {
-  flex: 1 1 180px;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.expense-form button {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.expense-form button:hover {
-  background-color: #43a047;
-}
-
-/* Filter Section */
-.filter-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start;
-  margin-bottom: 20px;
-}
-
-.filter-controls input,
-.filter-controls button {
-  padding: 8px 12px;
-  font-size: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.filter-controls button {
-  background-color: #2196f3;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.filter-controls button:hover {
-  background-color: #1976d2;
-}
-
-/* Table */
-.expense-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.expense-table th,
-.expense-table td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-.expense-table th {
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-.expense-table td button {
-  padding: 5px 10px;
-  background-color: #e53935;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.expense-table td button:hover {
-  background-color: #c62828;
-}
-
-/* Balance */
-.balance-display {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 20px;
-  text-align: right;
-  color: #2e7d32;
-}
-
-/* Message Box */
-.message-box-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-.message-box-content {
-  background-color: white;
-  padding: 25px 30px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.message-box-text {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.message-box-button {
-  padding: 8px 20px;
-  font-size: 14px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.message-box-button:hover {
-  background-color: #388e3c;
-}
-
-/* Responsive */
-@media screen and (max-width: 600px) {
   .expense-form,
   .filter-controls {
     flex-direction: column;
+    gap: 10px;
   }
 
   .expense-form input,
@@ -172,9 +16,42 @@
   .filter-controls input,
   .filter-controls button {
     flex: 1 1 100%;
+    font-size: 14px;
+  }
+
+  .expense-form button,
+  .filter-controls button {
+    padding: 10px;
+  }
+
+  .expense-table th,
+  .expense-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .expense-table td button {
+    font-size: 12px;
+    padding: 4px 8px;
   }
 
   .balance-display {
+    font-size: 16px;
     text-align: center;
+    margin-top: 15px;
+  }
+
+  .message-box-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .message-box-text {
+    font-size: 15px;
+  }
+
+  .message-box-button {
+    font-size: 13px;
+    padding: 8px 16px;
   }
 }
