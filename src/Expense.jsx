@@ -79,10 +79,21 @@ const Expense = () => {
   const handleAddExpense = (e) => {
     e.preventDefault();
 
-    if (!description.trim() || !amount || !category || !date) {
-      setMessage('Please fill in all fields.');
-      return;
-    }
+    if (
+  !description.trim().length ||
+  description.trim().length > 50 ||  // <-- new condition
+  !amount ||
+  !category ||
+  !date
+) {
+  setMessage(
+    description.trim().length > 50
+      ? 'Description must be less than 50 characters.'
+      : 'Please fill in all fields.'
+  );
+  return;
+}
+
 
     const parsedAmount = parseFloat(amount);
     if (isNaN(parsedAmount) || parsedAmount <= 0) {
